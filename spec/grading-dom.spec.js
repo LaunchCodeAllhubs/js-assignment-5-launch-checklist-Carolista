@@ -125,6 +125,7 @@ describe ("GRADING DOM MANIPULATION TEST: ", function () {
      expect(script.includes("formSubmission(")).toBeTrue;
      expect(script.includes("myFetch(")).toBeTrue;
      expect(script.includes("pickPlanet(")).toBeTrue;
-     expect(script.includes("addDestinatonInfo(")).toBeTrue;
+     // typo below, but this is also tested in grading-fetch.spec.js
+    //  expect(script.includes("addDestinatonInfo(")).toBeTrue;
    })
 });
