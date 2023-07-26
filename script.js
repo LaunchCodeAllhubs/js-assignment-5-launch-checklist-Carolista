@@ -27,6 +27,8 @@ window.addEventListener('load', function () {
     const fuelInput = document.getElementById('fuelLevel');
     const cargoInput = document.getElementById('cargoMass');
 
-    formSubmission(document, pilotInput.value, copilotInput.value, fuelInput.value, cargoInput.value);
+    const list = document.getElementById('faultyItems');
+
+    formSubmission(document, list, pilotInput.value, copilotInput.value, fuelInput.value, cargoInput.value);
   });
 });

@@ -31,10 +31,9 @@ function validateInput(testInput) {
   return isNaN(Number(testInput)) ? 'Not a Number' : 'Is a Number';
 }
 
-function formSubmission(document, pilot, copilot, fuelLevel, cargoMass) {
+function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
 
   const launchStatus = document.getElementById('launchStatus');
-  const list = document.getElementById('faultyItems');
 
   const pilotStatus = document.getElementById('pilotStatus');
   const copilotStatus = document.getElementById('copilotStatus');
@@ -77,12 +76,13 @@ function formSubmission(document, pilot, copilot, fuelLevel, cargoMass) {
 
     if (fuelLevel < 10000 || cargoMass > 10000) {
       list.style.visibility = "visible";
+      console.log("\n**************\n", list.style.visibility);
       launchStatus.style.color = "#C7254E";
-      launchStatus.innerHTML = "Shuttle not ready for launch"
+      launchStatus.innerHTML = "Shuttle Not Ready for Launch"
     } else {
-      list.style.visibility = "hidden";
+      // list.style.visibility = "hidden";
       launchStatus.style.color = "#419F6A";
-      launchStatus.innerHTML = "Shuttle is ready for launch"
+      launchStatus.innerHTML = "Shuttle is Ready for Launch"
     }
   }
   
